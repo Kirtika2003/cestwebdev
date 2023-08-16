@@ -227,4 +227,32 @@ footer{
    filter: drop-shadow(3px 3px 10px #cb2c49);
    transition: 0.3s;
 }
+.bubbles{
+    position: relative;
+    display: flex;
+    width: 50%;
+    float: right;
+    z-index: +100;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    border-radius: 50%;
+   filter: blur(20px);
+    background-color: #4037A0;
+    box-shadow: 0 0 0 10px #3a3765 #5c55ad,
+    0 0 50px #2c7ecb,0 0 100px #2c7ecb;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
 
+}
+@keyframes animate{
+    0%{
+        transform: translateY(110vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
